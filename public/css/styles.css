@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /*========== Colors ==========*/
+  /* Change favorite color */
+  --hue-color: 215; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+
+  /* HSL color mode */
+  --first-color: rgb(255, 255, 255);
+  --first-color-second: rgb(240, 240, 240);
+  --first-color-alt: rgb(0, 122, 253);
+  --first-color-lighter: hsl(var(--hue-color), 92, 85%);
+  --title-color: hsl(var(--hue-color), 8%, 15%);
+  --text-color: hsl(var(--hue-color), 8%, 45%);
+  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+  --input-color: hsl(var(--hue-color), 70%, 96%);
+  --body-color: hsl(var(--hue-color), 60%, 99%);
+  --container-color: #fff;
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== Box Shadow ==========*/
+    --box-shadow: box-shadow: 0px 10px 10px 0px rgb(219, 219, 219);
+  /*========== Font and typography ==========*/
+  --body-font: "Poppins", sans-serif;
+}
+/*========== Variables Dark theme ==========*/
+body.dark-theme {
+  /* HSL color mode */
+  --first-color-second: rgb(0, 52, 110);
+  --title-color: hsl(var(--hue-color), 8%, 95%);
+  --text-color: hsl(var(--hue-color), 8%, 75%);
+  --input-color: hsl(var(--hue-color), 29%, 16%);
+  --body-color: hsl(var(--hue-color), 28%, 12%);
+  --container-color: hsl(var(--hue-color), 29%, 16%);
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+}
+
+body {
+  background-color: var(--first-color-second);
+  font-family: var(--body-font);
+  font-size: 12px;
+}
+
+.container{
+    background-color: var(--first-color-second);
+    padding: 2rem;
+    max-width: 500px;
+}
+
+.header{
+    /* background-color: red; */
+    width: 15rem;
+    font-weight: 600;
+    font-size: 22px;
+    margin-left: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.search-bar{
+    /* width: 19.5rem; */
+    border-radius: 10px;
+    padding: 12px;
+    background-color: var(--first-color);
+    box-shadow: 0px 10px 10px 0px rgb(219, 219, 219);
+}
+
+.search{
+    border: none;
+    background-color: transparent;
+    width: 54%;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: rgb(119, 119, 119);
+    margin-left: -2px;
+}
+
+.search:focus{
+    outline: none;
+}
+
+.search-icon{
+    margin-left: .25rem;
+    margin-right: .40rem;
+    font-size: 20px;
+    color: var(--first-color-alt);
+}
+.search-btn{
+    border: none;
+    background-color: rgb(1, 111, 255);
+    color: #fff;
+    font-size: 12px;
+    padding: 12px;
+    border-radius: 5px;
+    margin-left: 30px;
+    width: 4rem;
+}
+
+.search-btn:hover {
+    cursor: pointer;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+
+::placeholder{
+    color: rgb(119, 119, 119);
+    font-size: 12.7px;
+    font-weight: 500;
+    /* margin-left: 1rem; */
+}
+
+.display-card{
+    background-color: var(--first-color);
+    box-shadow: 0px 10px 10px 0px rgb(219, 219, 219);
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+.profile{
+    display: flex;
+    padding: 1rem;
+}
+.bio{
+    margin-left: 1rem;
+}
+.name{
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.handle{
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--first-color-alt);
+}
+
+.join-date{
+    font-weight: 400;
+    font-size: 13px;
+    color: rgb(168, 168, 168);
+    margin-top: .25rem;
+}
+
+.avatar img{
+    width: 60px;
+    border-radius: 180px;
+}
+
+.discription{
+    color: rgb(170, 170, 170);
+    margin-top: .25rem;
+    margin-left: 1rem;
+    font-weight: 600;
+    text-align: left;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.bio-info-bar{
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--first-color-second);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.bio-info-bar p{
+    font-weight: 500;
+    color: rgb(148, 148, 148);
+}
+.bio-info-bar h4{
+    font-size: 15px;
+}
+
+.socials{
+    padding: 1rem;
+    line-height: 1.5rem;
+}
+
+.location{
+    display: flex;
+}
+.location p{
+    margin-left: 1rem;
+    color: rgb(155, 154, 154);
+    font-weight: 600;
+}
+
+.location-icon{
+    font-size: 18px;
+}
+
+.website{
+    display: flex;
+}
+
+.website a{
+    margin-left: 1rem;
+    color: rgb(155, 154, 154);
+    text-decoration:none;
+    font-weight: 600;
+}
+
+.link-icon{
+    font-size: 18px;
+}
+
+.twitter{
+    display: flex;
+}
+.twitter p{
+    margin-left: 1rem;
+    color: rgb(155, 154, 154);
+    font-weight: 600;
+}
+
+.twitter-icon{
+    font-size: 18px;
+}
+
+.company{
+    display: flex;
+}
+
+.company p{
+    margin-left: 1rem;
+    color: rgb(155, 154, 154);
+    font-weight: 600;
+}
+
+.company-icon{
+    font-size: 18px;
+}
+
+@media screen and (max-width:410px){
+    .search{
+        margin-left: -12px;
+    }
+
+}
+
+@media screen and (min-width: 768px){
+    .container{
+        margin-left: 8rem;
+        margin-top: 5rem;
+    }
+    .search{
+        width: 64%;
+    }
+
+}
+@media screen and (min-width:500px) and (max-width:767px){
+    .search{
+        width: 66%;
+    }
+}
+
+@media screen and (min-width: 900px){
+    .container{
+        margin-left: 20rem;
+        margin-top: 5rem;
+    }
+}
+
+
+
+@media screen and (min-width: 1200px){
+    .container{
+       margin-left: 400px;
+    }
+}
+
+
+
